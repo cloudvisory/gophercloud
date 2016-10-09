@@ -84,6 +84,8 @@ type Port struct {
 	DeviceID string `mapstructure:"device_id" json:"device_id"`
 	// Identifies the list of IP addresses the port will recognize/accept
 	AllowedAddressPairs []AddressPair `mapstructure:"allowed_address_pairs" json:"allowed_address_pairs"`
+	//The port security status. A valid value is enabled (true) or disabled (false).
+	PortSecurityEnabled  bool `mapstructure:"port_security_enabled" json:"port_security_enabled"`
 }
 
 // PortPage is the page returned by a pager when traversing over a collection
